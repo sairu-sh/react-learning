@@ -9,9 +9,9 @@ export default function App() {
   return (
     <div className="steps">
       <div className="numbers">
-        <div className="active">1</div>
-        <div className="number">2</div>
-        <div className="number">3</div>
+        <div className={`${step >= 1 ? "active" : null}`}>1</div>
+        <div className={`${step >= 2 ? "active" : null}`}>2</div>
+        <div className={`${step >= 3 ? "active" : null}`}>3</div>
       </div>
 
       <p className="message">
