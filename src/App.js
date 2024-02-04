@@ -9,10 +9,10 @@ const messages = [
 export default function App() {
   const [step, setStep] = useState(1);
   function handlePrevious() {
-    if (step > 1) console.log("prev");
+    if (step > 1) setStep(step - 1);
   }
   function handleNext() {
-    if (step < 3) console.log("next");
+    if (step < 3) setStep(step + 1);
 
     console.log(step);
   }
@@ -25,7 +25,7 @@ export default function App() {
       </div>
 
       <p className="message">
-        Step{step}: {messages[step]}
+        Step{step}: {messages[step - 1]}
       </p>
 
       <div className="buttons">
